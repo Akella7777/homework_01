@@ -11,12 +11,12 @@
 Console.WriteLine("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number % 2 == 0) 
+if (number % 2 == 0)
 {
     Console.WriteLine($"Число = {number}");
     Console.WriteLine($"Это четное число.");
 }
-else 
+else
 {
     Console.WriteLine($"Число = {number}");
     Console.WriteLine($"Это не четное число.");

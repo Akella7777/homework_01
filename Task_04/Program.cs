@@ -18,29 +18,29 @@ int numberC = Convert.ToInt32(Console.ReadLine());
 
 int numberMax = numberA;
 
-if (numberMax > numberB) 
+if (numberMax > numberB)
 {
-    if (numberMax > numberC) 
+    if (numberMax > numberC)
     {
-    Console.WriteLine($"Наибольшее число = {numberMax}");
+        Console.WriteLine($"Наибольшее число = {numberMax}");
     }
-    else 
+    else
     {
         numberMax = numberC;
         Console.WriteLine($"Наибольшее число = {numberMax}");
     }
 }
-else 
+else
 {
     numberMax = numberB;
-    if (numberMax > numberC) 
+    if (numberMax > numberC)
     {
-    Console.WriteLine($"Наибольшее число = {numberMax}");
+        Console.WriteLine($"Наибольшее число = {numberMax}");
     }
-    else 
+    else
     {
-    numberMax = numberC;
-    Console.WriteLine($"Наибольшее число = {numberC}");
+        numberMax = numberC;
+        Console.WriteLine($"Наибольшее число = {numberC}");
     }
 }
 
