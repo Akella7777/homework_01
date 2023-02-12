@@ -43,5 +43,3 @@ else
         Console.WriteLine($"Наибольшее число = {numberC}");
     }
 }
-
-

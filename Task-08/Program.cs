@@ -11,14 +11,21 @@ int numberN = Convert.ToInt32(Console.ReadLine());
 
 int index = 1;
 
+if (numberN < 1)
+{
+    Console.WriteLine("Введено некорректное число. Введите натуральное число");
+}
+
+if (numberN == 1)
+{
+    Console.WriteLine("Введено число 1. Ряд из натуральных чисел отсутствет");
+}
+
 while (index <= numberN)
 {
     if (index % 2 == 0)
     {
-    Console.Write(index + " ");
+        Console.Write(index + " ");
     }
     index++;
 }
-
-
-

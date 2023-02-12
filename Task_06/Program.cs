@@ -21,6 +21,3 @@ else
     Console.WriteLine($"Число = {number}");
     Console.WriteLine($"Это не четное число.");
 }
-
-
-
