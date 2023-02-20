@@ -5,25 +5,46 @@
 
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
+/* 
+Console.WriteLine ("введите коордионату Х точки A: ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("введите коордионату Y точки A: ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("введите коордионату Z точки A: ");
+int z1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("введите коордионату Х точки B: ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("введите коордионату Y точки B: ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("введите коордионату Z точки B: ");
+int z2 = Convert.ToInt32(Console.ReadLine());
 
-int x1 = Coordinate("x", "A");
-int y1 = Coordinate("y", "A");
-int z1 = Coordinate("z", "A");
-int x2 = Coordinate("x", "B");
-int y2 = Coordinate("y", "B");
-int z2 = Coordinate("z", "B");
+double result = Math.Sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1) + (z2 - z1)*(z2 - z1));
+Console.WriteLine($"Длина отрезка AB равна {result}");
+ */
 
-int Coordinate(string coorName, string pointName)
+// ВАРИАНТ 2
+int x1 = Promt("Введите коордионату Х точки A: ");
+int y1 = Promt("Введите коордионату Y точки A: ");
+int z1 = Promt("Введите коордионату Z точки A: ");
+int x2 = Promt("Введите коордионату Х точки B: ");
+int y2 = Promt("Введите коордионату Y точки B: ");
+int z2 = Promt("Введите коордионату Z точки B: ");
+
+int a = (x2 - x1)*(x2 - x1);
+int b = (y2 - y1)*(y2 - y1);
+int c = (z2 - z1)*(z2 - z1);
+
+Console.WriteLine($"Длина отрезка AB равна: " + SegmentLength(a, b, c));
+
+int Promt (string message)
 {
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
+    Console.WriteLine(message);
     return Convert.ToInt32(Console.ReadLine());
 }
 
-double Decision(double x1, double x2, double y1, double y2, double z1, double z2)
+double SegmentLength (int A, int B, int C)
 {
-    return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2));
+    double result = Math.Sqrt(A + B + C);
+    return result;
 }
-
-double segmentLength = Math.Round(Decision(x1, x2, y1, y2, z1, z2), 2);
-
-Console.WriteLine($"Длина отрезка  {segmentLength}");

@@ -7,20 +7,24 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите число: ");
+//ВАРИАНТ 1
+
+Console.WriteLine ("Введите пятизначное число: ");
 string number = Console.ReadLine();
+int numberLength = number.Length;
 
-void Palindrome(string number)
+if (numberLength == 5)
 {
-    if (number[0] == number[4] && number[1] == number[3])
-    {
-        Console.WriteLine($"Число: {number} - палиндром.");
-    }
-    else Console.WriteLine($"Число: {number} - НЕ палиндром.");
+  if (number[0] == number[4] && number[1] == number[3])
+  {
+    Console.WriteLine($"Число: {number} - является палиндромом");
+  }
+  else
+  {
+    Console.WriteLine($"Число: {number} - не является палиндромом");
+  }
 }
-
-if (number!.Length == 5)
+else 
 {
-    Palindrome(number);
+  Console.WriteLine ("Введено не пятизначное число. Введите корректное число");
 }
-else Console.WriteLine($"Введи правильное число");
