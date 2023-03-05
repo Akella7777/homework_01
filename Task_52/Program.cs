@@ -76,7 +76,7 @@ double[] AveregeColumns(int[,] matrix)
 
 int matrixRows = InputRead("Введите количество строк: ");
 int matrixColumns = InputRead("Введите количество столбцов: ");
-int[,] array2D = CreateMatrixRndDouble(matrixRows, matrixColumns, 0, 100);
+int[,] array2D = CreateMatrixRndDouble(matrixRows, matrixColumns, 0, 10);
 PrintMatrix(array2D);
 double[] averegeColumns = AveregeColumns(array2D);
 Console.Write("Среднее арифметическое каждого столбца: ");

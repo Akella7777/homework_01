@@ -21,7 +21,8 @@ Console.WriteLine();
 int row = InputRead("Введите индекс строки: ");
 int column = InputRead("Введите индекс столбца: ");
 
-
+if (row >= matrixRows || column >= matrixColumns) Console.WriteLine($"{row}, {column} -> Такого элемента нет");
+else Console.WriteLine($"Значение элемента с индексами {row}, {column} = {array2D[row, column]}");
 
 int InputRead(string msg)
 {
@@ -58,8 +59,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-if (row >= matrixRows || column >= matrixColumns) Console.WriteLine($"{row}, {column} -> Такого элемента нет");
-else Console.WriteLine($"Значение элемента с индексами {row}, {column} = {array2D[row, column]}");
+
 
 // ВАРИАНТ 2
 /*
