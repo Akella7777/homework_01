@@ -10,6 +10,8 @@
 //8 4 2 4
 //1, 7->такого элемента в массиве нет
 
+using System.ComponentModel.Design;
+
 Console.Clear();
 
 
@@ -21,8 +23,17 @@ Console.WriteLine();
 int row = InputRead("Введите индекс строки: ");
 int column = InputRead("Введите индекс столбца: ");
 
-if (row >= array2D.GetLength(0) || column >= array2D.GetLength(1)) Console.WriteLine($"{row}, {column} -> Такого элемента нет");
-else Console.WriteLine($"Значение элемента с индексами {row}, {column} = {array2D[row, column]}");
+if (row < 0 || column < 0) 
+{
+    Console.WriteLine($"Введены некорректные данные. Введите значение > 0");
+}
+else
+{
+    if (row >= array2D.GetLength(0) || column >= array2D.GetLength(1)) Console.WriteLine($"{row}, {column} -> Такого элемента нет");
+    else Console.WriteLine($"Значение элемента с индексами {row}, {column} = {array2D[row, column]}");
+}
+
+
 
 int InputRead(string msg)
 {

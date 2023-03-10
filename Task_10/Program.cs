@@ -6,21 +6,21 @@
 // 782 -> 8
 // 918 -> 1
 
-
-Console.WriteLine("Введите трехзначное число от 100 до 999: ");
+Console.WriteLine($"Введите трехзначное число от 100 до 999: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 99 && number < 1000)
-{
-    int secondDigitNumber = Number(number);
-    Console.WriteLine($"Вторая цифра введеного числа = {secondDigitNumber}");
-}
-else
-{
-    Console.WriteLine($"Введенное число {number} не является трехзначным. Введите число от 100 до 999");
-}
 
-int Number(int num)
+int digit = Digit(number);
+Console.WriteLine($"Число равно = {digit}");
+
+int Digit(int num)
 {
-    return num / 10 % 10;
+    if (number < 100 || number > 999)
+//    {
+//        Console.WriteLine("Введено не трехзначное число. Введите число от 100 до 999");
+//    }
+//    else
+    {
+        return number / 10 % 10;
+    }
 }

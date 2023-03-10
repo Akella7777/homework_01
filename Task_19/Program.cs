@@ -9,7 +9,7 @@
 
 //ВАРИАНТ 1
 
-Console.WriteLine ("Введите пятизначное число: ");
+/* Console.WriteLine ("Введите пятизначное число: ");
 string number = Console.ReadLine();
 int numberLength = number.Length;
 
@@ -27,4 +27,12 @@ if (numberLength == 5)
 else 
 {
   Console.WriteLine ("Введено не пятизначное число. Введите корректное число");
-}
+} */
+
+Console.WriteLine ("Введите пятизначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int numberA = number % 10;
+int numberB = number % 10;
+int numberC = number % 10;
+int numberD = number % 10;
