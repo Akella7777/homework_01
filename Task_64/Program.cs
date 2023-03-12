@@ -12,13 +12,22 @@ Console.Write("Введите натуральное число:  ");
 string res = Console.ReadLine();
 if (int.TryParse(res, out int result))
 {
-    NaturalNumbers(result);
-
-    void NaturalNumbers(int number)
+    if (result > 0)
     {
-        if (number == 0) return;
-        Console.Write($"{number}, ");
-        NaturalNumbers(number - 1);
+        NaturalNumbers(result);
+
+        void NaturalNumbers(int number)
+        {
+            if (number == 0) return;
+            Console.Write($"{number}, ");
+            NaturalNumbers(number - 1);
+        }
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Введено отрицательное число. Введите натуральное число:  ");
+        Console.ResetColor();
     }
 }
 else
@@ -37,15 +46,24 @@ else
 //    string text = Console.ReadLine();
 //    if (int.TryParse(text, out int number))
 //    {
-//        NaturalNumbers(number);
-
-//        void NaturalNumbers(int number)
+//        if (number > 0)
 //        {
-//            if (number == 0) return;
-//            Console.Write($"{number}, ");
-//            NaturalNumbers(number - 1);
+//            NaturalNumbers(number);
+
+//            void NaturalNumbers(int number)
+//            {
+//                if (number == 0) return;
+//                Console.Write($"{number}, ");
+//                NaturalNumbers(number - 1);
+//            }
+//            break;
 //        }
-//        break;
+//        else
+//        {
+//            Console.ForegroundColor = ConsoleColor.Red;
+//            Console.WriteLine("Введено отрицательное число. Введите натуральное число.");
+//            Console.ResetColor();
+//        }
 //    }
 //    else Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
 //}
